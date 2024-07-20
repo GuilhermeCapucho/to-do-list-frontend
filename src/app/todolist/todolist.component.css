@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #000;
+}
+
+th {
+    color: #000;
+}
+
+hr {
+    color: #000;
+}
+
+#submitButton {
+    margin-top: 20px;
+    margin-left: 600px;
+}
+
+#myCheckbox {
+    margin-left: 40px;
+}
+
+#submitForm {
+    margin-top: 40px;
+}
+
+#taskInTable {
+    max-width: 300px;
+}
+
+#delete {
+    width: 60px;
+}
+
+#edit {
+    width: 60px;
+}
+
+#save {
+    width: 60px;
+}
+
+.not-edit {
+    border: none;
+}
+
+.crossed {
+    text-decoration: line-through;
+}

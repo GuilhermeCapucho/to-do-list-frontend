@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  min-height: 100%;
+  background: linear-gradient(0deg, rgba(177,224,1,1) 0%, rgba(8,54,67,1) 55%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

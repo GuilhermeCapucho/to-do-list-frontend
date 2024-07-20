@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>To Do List | DataCake</h1>
+
+    <hr>
+    <form id="submitForm" (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+        <div class="form-group">
+            <input type="text" class="form-control" id="task" placeholder="Insira a sua tarefa" ngModel name="task" required>
+            <small *ngIf="taskForm.invalid && taskForm.dirty" id="errorMessage" class="form-text text-danger">
+                Campo obrigatório
+            </small>
+        </div>
+
+        <button [disabled]="taskForm.invalid" id="submitButton" type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <hr>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tarefa</th>
+                <th scope="col">Completada</th>
+                <th scope="col">Deletar</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Salvar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of taskArray; index as i">
+                <td>
+                    <input [ngClass]="{'edit': t.isEditable, 'not-edit': !t.isEditable, 'crossed': t.isCompleted}"
+                        #taskinput type="text" class="form-control" id="taskInTable" [value]="t.taskName"
+                        [readOnly]="!t.isEditable">
+                </td>
+                <td>
+                    <input (change)="onCheck(i)" id="myCheckbox" type="checkbox" [checked]="t.isCompleted">
+                </td>
+                <td>
+                    <button id="delete" class="btn btn-danger btn-sm" (click)="onDelete(i)">Deletar</button>
+                </td>
+                <td>
+                    <button id="edit" class="btn btn-primary btn-sm" (click)="onEdit(i)" [disabled]="t.isEditable">
+                        Editar
+                    </button>
+                </td>
+                <td>
+                    <button id="save" class="btn btn-warning btn-sm" (click)="onSave(i, taskinput.value)"
+                        [disabled]="!t.isEditable">Salvar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
