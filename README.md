@@ -9,7 +9,7 @@ Frontend de um aplicativo de lista de tarefas construído com Django Rest Framew
 
 ## Installation
 - Download or clone repository.
-- Run ```npm install``` in the To Do List - Angular - Frontend directory to install some dependencies
+- Run ```npm install``` in the directory to install some dependencies
 - Run ```ng serve``` to make the website work
 
 ## Usage
