@@ -3,7 +3,7 @@
 Frontend de um aplicativo de lista de tarefas construído com Django Rest Framework para backend e Angular para frontend.
 
 ## Requirements
-- Angular CLI 18.1.0
+- Angular CLI
 - Node 20.15.1
 - Package Manager: npm 10.8.2
 
